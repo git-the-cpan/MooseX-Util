@@ -8,10 +8,8 @@
 #   The GNU Lesser General Public License, Version 2.1, February 1999
 #
 package MooseX::Util::Meta::Class;
-BEGIN {
-  $MooseX::Util::Meta::Class::AUTHORITY = 'cpan:RSRCHBOY';
-}
-$MooseX::Util::Meta::Class::VERSION = '0.003';
+our $AUTHORITY = 'cpan:RSRCHBOY';
+$MooseX::Util::Meta::Class::VERSION = '0.004';
 # ABSTRACT: A helper metaclass
 
 use Moose;
@@ -41,7 +39,7 @@ MooseX::Util::Meta::Class - A helper metaclass
 
 =head1 VERSION
 
-This document describes version 0.003 of MooseX::Util::Meta::Class - released May 22, 2014 as part of MooseX-Util.
+This document describes version 0.004 of MooseX::Util::Meta::Class - released May 07, 2015 as part of MooseX-Util.
 
 =head1 SYNOPSIS
 
@@ -73,11 +71,6 @@ L<MooseX::Util|MooseX::Util>
 
 =back
 
-=head1 SOURCE
-
-The development version is on github at L<http://https://github.com/RsrchBoy/moosex-util>
-and may be cloned from L<git://https://github.com/RsrchBoy/moosex-util.git>
-
 =head1 BUGS
 
 Please report any bugs or feature requests on the bugtracker website
@@ -95,7 +88,7 @@ Chris Weyl <cweyl@alumni.drew.edu>
 
 =begin html
 
-<a href="https://www.gittip.com/RsrchBoy/"><img src="https://raw.githubusercontent.com/gittip/www.gittip.com/master/www/assets/%25version/logo.png" /></a>
+<a href="https://gratipay.com/RsrchBoy/"><img src="http://img.shields.io/gratipay/RsrchBoy.svg" /></a>
 <a href="http://bit.ly/rsrchboys-wishlist"><img src="http://wps.io/wp-content/uploads/2014/05/amazon_wishlist.resized.png" /></a>
 <a href="https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithub.com%2FRsrchBoy%2Fmoosex-util&title=RsrchBoy's%20CPAN%20MooseX-Util&tags=%22RsrchBoy's%20MooseX-Util%20in%20the%20CPAN%22"><img src="http://api.flattr.com/button/flattr-badge-large.png" /></a>
 
@@ -106,9 +99,9 @@ rather B<it is simply a very pleasant surprise>. I largely create and release
 works like this because I need them or I find it enjoyable; however, don't let
 that stop you if you feel like it ;)
 
-L<Flattr this|https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithub.com%2FRsrchBoy%2Fmoosex-util&title=RsrchBoy's%20CPAN%20MooseX-Util&tags=%22RsrchBoy's%20MooseX-Util%20in%20the%20CPAN%22>,
-L<gittip me|https://www.gittip.com/RsrchBoy/>, or indulge my
-L<Amazon Wishlist|http://bit.ly/rsrchboys-wishlist>...  If you so desire.
+L<Flattr|https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithub.com%2FRsrchBoy%2Fmoosex-util&title=RsrchBoy's%20CPAN%20MooseX-Util&tags=%22RsrchBoy's%20MooseX-Util%20in%20the%20CPAN%22>,
+L<Gratipay|https://gratipay.com/RsrchBoy/>, or indulge my
+L<Amazon Wishlist|http://bit.ly/rsrchboys-wishlist>...  If and *only* if you so desire.
 
 =head1 COPYRIGHT AND LICENSE
 

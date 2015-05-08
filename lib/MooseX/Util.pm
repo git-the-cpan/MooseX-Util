@@ -8,11 +8,9 @@
 #   The GNU Lesser General Public License, Version 2.1, February 1999
 #
 package MooseX::Util;
-BEGIN {
-  $MooseX::Util::AUTHORITY = 'cpan:RSRCHBOY';
-}
-# git description: 0.002-3-g0d45e2b
-$MooseX::Util::VERSION = '0.003';
+our $AUTHORITY = 'cpan:RSRCHBOY';
+# git description: 0.003-8-g6d99197
+$MooseX::Util::VERSION = '0.004';
 
 # ABSTRACT: Moose::Util extensions
 
@@ -21,6 +19,36 @@ use warnings;
 
 use parent 'Moose::Util';
 
+use Sub::Exporter::Progressive -setup => {
+    exports => [
+        qw{
+            add_method_modifier
+            apply_all_roles
+            does_role
+            english_list
+            ensure_all_roles
+            find_meta
+            get_all_attribute_values
+            get_all_init_args
+            is_role
+            meta_attribute_alias
+            meta_class_alias
+            resolve_metaclass_alias
+            resolve_metatrait_alias
+            search_class_by_role
+            throw_exception
+            with_traits
+        },
+
+        # and our own...
+        qw{
+            is_private
+        },
+    ],
+    groups => { default => [ ':all' ] },
+};
+
+use Carp 'confess';
 use MooseX::Util::Meta::Class;
 
 
@@ -36,6 +64,16 @@ sub with_traits {
     )->name;
 }
 
+
+sub is_private($) {
+    my ($name) = @_;
+
+    confess 'is_private() must be called with a name to test!'
+        unless $name;
+
+    return 1 if $name =~ /^_/;
+    return;
+}
 
 !!42;
 
@@ -55,7 +93,7 @@ MooseX::Util - Moose::Util extensions
 
 =head1 VERSION
 
-This document describes version 0.003 of MooseX::Util - released May 22, 2014 as part of MooseX-Util.
+This document describes version 0.004 of MooseX::Util - released May 07, 2015 as part of MooseX-Util.
 
 =head1 SYNOPSIS
 
@@ -77,7 +115,7 @@ variety of reasons.  Those functions are documented here.
 
 =head1 FUNCTIONS
 
-=head2 with_traits(<classname> => (<trait1>, ... )
+=head2 with_traits(<classname> => (<trait1>, ... ))
 
 Given a class and one or more traits, we construct an anonymous class that is
 a subclass of the given class and consumes the traits given.  This is exactly
@@ -100,6 +138,17 @@ Rather than:
 This is nice because we have an idea of where the first anonymous class came
 from, whereas the second one could could be from anywhere.
 
+=head2 is_private
+
+    # true if "private"
+    ... if is_private('_some_name');
+
+Ofttimes we need to determine if a name is considered "private" or not.  By convention,
+method, attribute, and other names are considered private if their first character is
+an underscore.
+
+While trivial to test for, this allows us to centralize the tests in one place.
+
 =head1 SEE ALSO
 
 Please see those modules/websites for more information related to this module.
@@ -111,11 +160,6 @@ Please see those modules/websites for more information related to this module.
 L<Moose::Util>
 
 =back
-
-=head1 SOURCE
-
-The development version is on github at L<http://https://github.com/RsrchBoy/moosex-util>
-and may be cloned from L<git://https://github.com/RsrchBoy/moosex-util.git>
 
 =head1 BUGS
 
@@ -134,7 +178,7 @@ Chris Weyl <cweyl@alumni.drew.edu>
 
 =begin html
 
-<a href="https://www.gittip.com/RsrchBoy/"><img src="https://raw.githubusercontent.com/gittip/www.gittip.com/master/www/assets/%25version/logo.png" /></a>
+<a href="https://gratipay.com/RsrchBoy/"><img src="http://img.shields.io/gratipay/RsrchBoy.svg" /></a>
 <a href="http://bit.ly/rsrchboys-wishlist"><img src="http://wps.io/wp-content/uploads/2014/05/amazon_wishlist.resized.png" /></a>
 <a href="https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithub.com%2FRsrchBoy%2Fmoosex-util&title=RsrchBoy's%20CPAN%20MooseX-Util&tags=%22RsrchBoy's%20MooseX-Util%20in%20the%20CPAN%22"><img src="http://api.flattr.com/button/flattr-badge-large.png" /></a>
 
@@ -145,9 +189,9 @@ rather B<it is simply a very pleasant surprise>. I largely create and release
 works like this because I need them or I find it enjoyable; however, don't let
 that stop you if you feel like it ;)
 
-L<Flattr this|https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithub.com%2FRsrchBoy%2Fmoosex-util&title=RsrchBoy's%20CPAN%20MooseX-Util&tags=%22RsrchBoy's%20MooseX-Util%20in%20the%20CPAN%22>,
-L<gittip me|https://www.gittip.com/RsrchBoy/>, or indulge my
-L<Amazon Wishlist|http://bit.ly/rsrchboys-wishlist>...  If you so desire.
+L<Flattr|https://flattr.com/submit/auto?user_id=RsrchBoy&url=https%3A%2F%2Fgithub.com%2FRsrchBoy%2Fmoosex-util&title=RsrchBoy's%20CPAN%20MooseX-Util&tags=%22RsrchBoy's%20MooseX-Util%20in%20the%20CPAN%22>,
+L<Gratipay|https://gratipay.com/RsrchBoy/>, or indulge my
+L<Amazon Wishlist|http://bit.ly/rsrchboys-wishlist>...  If and *only* if you so desire.
 
 =head1 COPYRIGHT AND LICENSE
 
