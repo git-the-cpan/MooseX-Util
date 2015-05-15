@@ -29,13 +29,13 @@ no_index:
 provides:
   MooseX::Traitor:
     file: lib/MooseX/Traitor.pm
-    version: '0.004'
+    version: '0.005'
   MooseX::Util:
     file: lib/MooseX/Util.pm
-    version: '0.004'
+    version: '0.005'
   MooseX::Util::Meta::Class:
     file: lib/MooseX/Util/Meta/Class.pm
-    version: '0.004'
+    version: '0.005'
 requires:
   Carp: '0'
   Moose: '0'
@@ -54,7 +54,7 @@ resources:
   bugtracker: https://github.com/RsrchBoy/moosex-util/issues
   homepage: https://github.com/RsrchBoy/moosex-util
   repository: https://github.com/RsrchBoy/moosex-util.git
-version: '0.004'
+version: '0.005'
 x_Dist_Zilla:
   perl:
     version: '5.020001'
@@ -85,7 +85,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ContributorsFromGit
       name: '@RSRCHBOY/ContributorsFromGit'
-      version: '0.016'
+      version: '0.017'
     -
       class: Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch
       config:
@@ -173,7 +173,7 @@ x_Dist_Zilla:
     -
       class: Dist::Zilla::Plugin::ReportVersions::Tiny
       name: '@RSRCHBOY/ReportVersions::Tiny'
-      version: '1.11'
+      version: '1.12'
     -
       class: Dist::Zilla::Plugin::AutoPrereqs
       name: '@RSRCHBOY/AutoPrereqs'
@@ -409,7 +409,7 @@ x_Dist_Zilla:
         Dist::Zilla::Plugin::Git::Tag:
           branch: ~
           signed: '1'
-          tag: '0.004'
+          tag: '0.005'
           tag_format: '%v'
           tag_message: v%v
           time_zone: local
@@ -558,15 +558,15 @@ x_Dist_Zilla:
             -
               class: Pod::Weaver::Section::RSRCHBOY::RoleParameters
               name: 'ROLE PARAMETERS'
-              version: '0.061'
+              version: '0.062'
             -
               class: Pod::Weaver::Section::RSRCHBOY::RequiredAttributes
               name: 'REQUIRED ATTRIBUTES'
-              version: '0.061'
+              version: '0.062'
             -
               class: Pod::Weaver::Section::RSRCHBOY::LazyAttributes
               name: 'LAZY ATTRIBUTES'
-              version: '0.061'
+              version: '0.062'
             -
               class: Pod::Weaver::Section::Collect
               name: ATTRIBUTES
@@ -610,7 +610,7 @@ x_Dist_Zilla:
             -
               class: Pod::Weaver::Section::RSRCHBOY::Authors
               name: RSRCHBOY::Authors
-              version: '0.061'
+              version: '0.062'
             -
               class: Pod::Weaver::Section::Contributors
               name: '@RSRCHBOY/Contributors'

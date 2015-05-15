@@ -9,7 +9,7 @@
 #
 package MooseX::Util::Meta::Class;
 our $AUTHORITY = 'cpan:RSRCHBOY';
-$MooseX::Util::Meta::Class::VERSION = '0.004';
+$MooseX::Util::Meta::Class::VERSION = '0.005';
 # ABSTRACT: A helper metaclass
 
 use Moose;
@@ -39,7 +39,7 @@ MooseX::Util::Meta::Class - A helper metaclass
 
 =head1 VERSION
 
-This document describes version 0.004 of MooseX::Util::Meta::Class - released May 07, 2015 as part of MooseX-Util.
+This document describes version 0.005 of MooseX::Util::Meta::Class - released May 15, 2015 as part of MooseX-Util.
 
 =head1 SYNOPSIS
 

@@ -28,7 +28,7 @@
       },
       "develop" : {
          "requires" : {
-            "Dist::Zilla::PluginBundle::RSRCHBOY" : "0.061",
+            "Dist::Zilla::PluginBundle::RSRCHBOY" : "0.062",
             "Pod::Coverage::TrustPod" : "0",
             "Test::EOL" : "0",
             "Test::More" : "0.88",
@@ -73,15 +73,15 @@
    "provides" : {
       "MooseX::Traitor" : {
          "file" : "lib/MooseX/Traitor.pm",
-         "version" : "0.004"
+         "version" : "0.005"
       },
       "MooseX::Util" : {
          "file" : "lib/MooseX/Util.pm",
-         "version" : "0.004"
+         "version" : "0.005"
       },
       "MooseX::Util::Meta::Class" : {
          "file" : "lib/MooseX/Util/Meta/Class.pm",
-         "version" : "0.004"
+         "version" : "0.005"
       }
    },
    "release_status" : "stable",
@@ -96,7 +96,7 @@
          "web" : "https://github.com/RsrchBoy/moosex-util"
       }
    },
-   "version" : "0.004",
+   "version" : "0.005",
    "x_Dist_Zilla" : {
       "perl" : {
          "version" : "5.020001"
@@ -136,7 +136,7 @@
          {
             "class" : "Dist::Zilla::Plugin::ContributorsFromGit",
             "name" : "@RSRCHBOY/ContributorsFromGit",
-            "version" : "0.016"
+            "version" : "0.017"
          },
          {
             "class" : "Dist::Zilla::Plugin::Git::CheckFor::CorrectBranch",
@@ -252,7 +252,7 @@
          {
             "class" : "Dist::Zilla::Plugin::ReportVersions::Tiny",
             "name" : "@RSRCHBOY/ReportVersions::Tiny",
-            "version" : "1.11"
+            "version" : "1.12"
          },
          {
             "class" : "Dist::Zilla::Plugin::AutoPrereqs",
@@ -557,7 +557,7 @@
                "Dist::Zilla::Plugin::Git::Tag" : {
                   "branch" : null,
                   "signed" : "1",
-                  "tag" : "0.004",
+                  "tag" : "0.005",
                   "tag_format" : "%v",
                   "tag_message" : "v%v",
                   "time_zone" : "local"
@@ -747,17 +747,17 @@
                      {
                         "class" : "Pod::Weaver::Section::RSRCHBOY::RoleParameters",
                         "name" : "ROLE PARAMETERS",
-                        "version" : "0.061"
+                        "version" : "0.062"
                      },
                      {
                         "class" : "Pod::Weaver::Section::RSRCHBOY::RequiredAttributes",
                         "name" : "REQUIRED ATTRIBUTES",
-                        "version" : "0.061"
+                        "version" : "0.062"
                      },
                      {
                         "class" : "Pod::Weaver::Section::RSRCHBOY::LazyAttributes",
                         "name" : "LAZY ATTRIBUTES",
-                        "version" : "0.061"
+                        "version" : "0.062"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Collect",
@@ -812,7 +812,7 @@
                      {
                         "class" : "Pod::Weaver::Section::RSRCHBOY::Authors",
                         "name" : "RSRCHBOY::Authors",
-                        "version" : "0.061"
+                        "version" : "0.062"
                      },
                      {
                         "class" : "Pod::Weaver::Section::Contributors",

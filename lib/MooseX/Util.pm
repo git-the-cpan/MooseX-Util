@@ -9,8 +9,8 @@
 #
 package MooseX::Util;
 our $AUTHORITY = 'cpan:RSRCHBOY';
-# git description: 0.003-8-g6d99197
-$MooseX::Util::VERSION = '0.004';
+# git description: 0.004-2-ga176eea
+$MooseX::Util::VERSION = '0.005';
 
 # ABSTRACT: Moose::Util extensions
 
@@ -75,6 +75,8 @@ sub is_private($) {
     return;
 }
 
+sub find_meta { goto \&Moose::Util::find_meta }
+
 !!42;
 
 __END__
@@ -93,7 +95,7 @@ MooseX::Util - Moose::Util extensions
 
 =head1 VERSION
 
-This document describes version 0.004 of MooseX::Util - released May 07, 2015 as part of MooseX-Util.
+This document describes version 0.005 of MooseX::Util - released May 15, 2015 as part of MooseX-Util.
 
 =head1 SYNOPSIS
 
@@ -148,6 +150,8 @@ method, attribute, and other names are considered private if their first charact
 an underscore.
 
 While trivial to test for, this allows us to centralize the tests in one place.
+
+=for Pod::Coverage find_meta
 
 =head1 SEE ALSO
 

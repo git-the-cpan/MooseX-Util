@@ -17,6 +17,7 @@ t/00-check-deps.t
 t/00-compile.t
 t/000-report-versions-tiny.t
 t/basic.t
+t/find_meta.t
 t/is_private.t
 t/metaclass/compat.t
 t/metaclass/validate.t

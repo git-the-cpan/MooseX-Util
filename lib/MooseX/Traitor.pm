@@ -9,7 +9,7 @@
 #
 package MooseX::Traitor;
 our $AUTHORITY = 'cpan:RSRCHBOY';
-$MooseX::Traitor::VERSION = '0.004';
+$MooseX::Traitor::VERSION = '0.005';
 # ABSTRACT: An alternate way to compose your classes with traits
 
 use Moose::Role;
@@ -44,7 +44,7 @@ MooseX::Traitor - An alternate way to compose your classes with traits
 
 =head1 VERSION
 
-This document describes version 0.004 of MooseX::Traitor - released May 07, 2015 as part of MooseX-Util.
+This document describes version 0.005 of MooseX::Traitor - released May 15, 2015 as part of MooseX-Util.
 
 =head1 SYNOPSIS
 
