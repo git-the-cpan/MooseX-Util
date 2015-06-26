@@ -58,7 +58,6 @@ eval { $v .= pmver('Moose','any version') };
 eval { $v .= pmver('Moose::Meta::Class','any version') };
 eval { $v .= pmver('Moose::Role','any version') };
 eval { $v .= pmver('Moose::Util','any version') };
-eval { $v .= pmver('MooseX::AttributeShortcuts','any version') };
 eval { $v .= pmver('MooseX::TraitFor::Meta::Class::BetterAnonClassNames','0.002001') };
 eval { $v .= pmver('Sub::Exporter::Progressive','any version') };
 eval { $v .= pmver('Test::CheckDeps','0.010') };

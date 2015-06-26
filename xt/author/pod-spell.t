@@ -28,7 +28,6 @@ Weyl
 cweyl
 lib
 MooseX
-Traitor
 Util
 Meta
 Class

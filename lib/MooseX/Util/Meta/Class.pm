@@ -9,12 +9,11 @@
 #
 package MooseX::Util::Meta::Class;
 our $AUTHORITY = 'cpan:RSRCHBOY';
-$MooseX::Util::Meta::Class::VERSION = '0.005';
+$MooseX::Util::Meta::Class::VERSION = '0.006';
 # ABSTRACT: A helper metaclass
 
 use Moose;
 use namespace::autoclean;
-use MooseX::AttributeShortcuts;
 
 extends 'Moose::Meta::Class';
 with 'MooseX::TraitFor::Meta::Class::BetterAnonClassNames';
@@ -39,7 +38,7 @@ MooseX::Util::Meta::Class - A helper metaclass
 
 =head1 VERSION
 
-This document describes version 0.005 of MooseX::Util::Meta::Class - released May 15, 2015 as part of MooseX-Util.
+This document describes version 0.006 of MooseX::Util::Meta::Class - released June 26, 2015 as part of MooseX-Util.
 
 =head1 SYNOPSIS
 

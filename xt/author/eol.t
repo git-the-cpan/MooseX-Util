@@ -7,7 +7,6 @@ use Test::More 0.88;
 use Test::EOL;
 
 my @files = (
-    'lib/MooseX/Traitor.pm',
     'lib/MooseX/Util.pm',
     'lib/MooseX/Util/Meta/Class.pm',
     't/00-check-deps.t',
@@ -18,7 +17,6 @@ my @files = (
     't/is_private.t',
     't/metaclass/compat.t',
     't/metaclass/validate.t',
-    't/traitor.t',
     't/with_traits.t'
 );
 

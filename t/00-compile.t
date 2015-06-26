@@ -2,14 +2,13 @@ use 5.006;
 use strict;
 use warnings;
 
-# this test was generated with Dist::Zilla::Plugin::Test::Compile 2.052
+# this test was generated with Dist::Zilla::Plugin::Test::Compile 2.053
 
 use Test::More;
 
-plan tests => 3 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
+plan tests => 2 + ($ENV{AUTHOR_TESTING} ? 1 : 0);
 
 my @module_files = (
-    'MooseX/Traitor.pm',
     'MooseX/Util.pm',
     'MooseX/Util/Meta/Class.pm'
 );
@@ -37,6 +36,9 @@ for my $lib (@module_files)
     my @_warnings = <$stderr>;
     waitpid($pid, 0);
     is($?, 0, "$lib loaded ok");
+
+    shift @_warnings if @_warnings and $_warnings[0] =~ /^Using .*\bblib/
+        and not eval { blib->VERSION('1.01') };
 
     if (@_warnings)
     {

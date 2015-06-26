@@ -9,8 +9,8 @@
 #
 package MooseX::Util;
 our $AUTHORITY = 'cpan:RSRCHBOY';
-# git description: 0.004-2-ga176eea
-$MooseX::Util::VERSION = '0.005';
+# git description: 0.005-4-gcb0aacd
+$MooseX::Util::VERSION = '0.006';
 
 # ABSTRACT: Moose::Util extensions
 
@@ -95,7 +95,7 @@ MooseX::Util - Moose::Util extensions
 
 =head1 VERSION
 
-This document describes version 0.005 of MooseX::Util - released May 15, 2015 as part of MooseX-Util.
+This document describes version 0.006 of MooseX::Util - released June 26, 2015 as part of MooseX-Util.
 
 =head1 SYNOPSIS
 
